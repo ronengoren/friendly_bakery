@@ -1,0 +1,76 @@
+<div class="container">
+
+  <div class="row">
+     <div class="col s1 m4 l4">
+       <div class="card medium" style="width:250px">
+         <div class="card-image">
+           <img src="<%= @y.cookies[0].image %>">
+         </div>
+         <div class="card-content"><%= @y.cookies[0].description %>
+         </div>
+         <div class="card-action">
+           <button id="buttonCookieOne" type="button" class="btn btn-primary #f8bbd0 pink lighten-4 center"><%= @y.cookies[0].name %>          <%= @y.cookies[0].price %></button>
+
+           <script>
+           let buttonCookieOne = document.getElementById("buttonCookieOne")
+           let amountCookieOne = <%= @y.cookies[0].amount %>
+           buttonCookieOne.onclick = function() {
+             amountCookieOne -= 1
+             if (amountCookieOne == 0) {
+               buttonCookieOne.innerHTML = "sold out!";
+             }
+           };
+           </script>
+                  </div>
+       </div>
+     </div>
+     <div class="col s1 m4 l4">
+       <div class="card medium" style="width:250px" >
+       <div class="card-image">
+         <img src="<%= @y.cookies[1].image %>">
+       </div>
+       <div class="card-content"><%= @y.cookies[1].description %>
+       </div>
+       <div class="card-action">
+         <button id="clickmeCookiesTwo" type="button" class="btn btn-primary #f8bbd0 pink lighten-4 center"><%= @y.cookies[1].name %>          <%= @y.cookies[1].price %></button>
+
+         <script>
+         let buttonCookieTwo = document.getElementById("clickmeCookiesTwo")
+         let amountCookieTwo = <%= @y.cookies[1].amount %>
+         buttonCookieTwo.onclick = function() {
+           amountCookieTwo -= 1
+           if (amountCookieTwo == 0) {
+             buttonCookieTwo.innerHTML = "sold out!";
+           }
+         };
+         </script>       </div>
+     </div>
+   </div>
+     <div class="col s1 m4 l4">
+       <div class="card medium" style="width:250px">
+         <div class="card-image">
+           <img src="<%= @y.cookies[2].image %>">
+         </div>
+         <div class="card-content"><%= @y.cookies[2].description %>
+         </div>
+         <div class="card-action">
+           <button id="clickmeCookiesThree" type="button" class="btn btn-primary #f8bbd0 pink lighten-4 center"><%= @y.cookies[2].name %>
+                      <%= @y.cookies[2].price %></button>
+
+           <script>
+           let buttonCookieThree = document.getElementById("clickmeCookiesThree")
+           let amountCookieThree = <%= @y.cookies[2].amount %>
+           buttonCookieThree.onclick = function() {
+             amountCookieThree -= 1
+             if (amountCookieThree == 0) {
+               buttonCookieThree.innerHTML = "sold out!";
+             }
+           };
+           </script>
+                  </div>
+       </div>
+     </div>
+
+   </div>
+
+</div>

@@ -1,3 +1,74 @@
-<%= @birthday_cake.description %>
-<%= @birthday_cake.price %>
-<%= @birthday_cake.amount %>
+<div class="container">
+
+  <div class="row">
+     <div class="col s1 m4 l4">
+       <div class="card medium" style="width:250px">
+         <div class="card-image">
+           <img src="<%= @x.cakes[0].image %>">
+         </div>
+         <div class="card-content"><%= @x.cakes[0].description %><%= @x.cakes[0].amount %>
+         </div>
+         <div class="card-action">
+           <button id="clickme" type="button" class="btn btn-primary #f8bbd0 pink lighten-4 center"><%= @x.cakes[1].name %> Cake         <%= @x.cakes[1].price %></button>
+           <script>
+           let button = document.getElementById("clickme")
+           let amount = <%= @x.cakes[0].amount %>
+           button.onclick = function() {
+             amount -= 1
+             if (amount == 0) {
+               button.innerHTML = "sold out!";
+             }
+           };
+           </script>
+         </div>
+       </div>
+     </div>
+     <div class="col s1 m4 l4">
+       <div class="card medium" style="width:250px" >
+       <div class="card-image">
+         <img src="<%= @x.cakes[1].image %>">
+       </div>
+       <div class="card-content"><%= @x.cakes[1].description %>
+       </div>
+       <div class="card-action">
+         <button id="clickmeCakeOne" type="button" class="btn btn-primary #f8bbd0 pink lighten-4 center"><%= @x.cakes[1].name %> Cake         <%= @x.cakes[1].price %></button>
+         <script>
+         let buttonCakeOne = document.getElementById("clickmeCakeOne")
+         let amountCakeOne = <%= @x.cakes[1].amount %>
+         buttonCakeOne.onclick = function() {
+           amountCakeOne -= 1
+           if (amountCakeOne == 0) {
+             buttonCakeOne.innerHTML = "sold out!";
+           }
+         };
+         </script>
+
+       </div>
+     </div>
+   </div>
+     <div class="col s1 m4 l4">
+       <div class="card medium" style="width:250px">
+         <div class="card-image">
+           <img src="<%= @x.cakes[2].image %>">
+         </div>
+         <div class="card-content"><%= @x.cakes[2].description %>
+         </div>
+         <div class="card-action">
+           <button id="clickmeCakeTwo" type="button" class="btn btn-primary #f8bbd0 pink lighten-4 center"><%= @x.cakes[1].name %> Cake         <%= @x.cakes[1].price %></button>
+           <script>
+           let buttonCakeTwo = document.getElementById("clickmeCakeTwo")
+           let amountCakeTwo = <%= @x.cakes[2].amount %>
+           buttonCakeTwo.onclick = function() {
+             amountCakeTwo -= 1
+             if (amountCakeTwo == 0) {
+               buttonCakeTwo.innerHTML = "sold out!";
+             }
+           };
+           </script>
+            </div>
+       </div>
+     </div>
+
+   </div>
+
+</div>

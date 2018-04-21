@@ -1,0 +1,71 @@
+
+<div class="container">
+
+  <div class="row">
+     <div class="col s1 m4 l4">
+       <div class="card medium" style="width:250px">
+         <div class="card-image">
+           <img src="<%= @z.muffins[0].image %>">
+         </div>
+         <div class="card-content"><%= @z.muffins[0].description %>
+         </div>
+         <div class="card-action">
+           <button id="clickmeMuffinOne" type="button" class="btn btn-primary #f8bbd0 pink lighten-4 center"><%= @z.muffins[0].name %>          <%= @z.muffins[0].price %></button>
+           <script>
+           let buttonMuffinOne = document.getElementById("clickmeMuffinOne")
+           let amountMuffinOne = <%= @z.muffins[0].amount %>
+           buttonMuffinOne.onclick = function() {
+             amountMuffinOne -= 1
+             if (amountMuffinOne == 0) {
+               buttonMuffinOne.innerHTML = "sold out!";
+             }
+           };
+           </script>
+          </div>
+       </div>
+     </div>
+     <div class="col s1 m4 l4">
+       <div class="card medium" style="width:250px" >
+       <div class="card-image">
+         <img src="<%= @z.muffins[1].image %>">
+       </div>
+       <div class="card-content"><%= @z.muffins[1].description %>
+       </div>
+       <div class="card-action">
+         <button id="clickmeMuffinTwo" type="button" class="btn btn-primary #f8bbd0 pink lighten-4 center"><%= @z.muffins[1].name %>          <%= @z.muffins[1].price %></button>
+         <script>
+         let buttonMuffinTwo = document.getElementById("clickmeMuffinTwo")
+         let amountMuffinTwo = <%= @z.muffins[1].amount %>
+         buttonMuffinTwo.onclick = function() {
+           amountMuffinTwo -= 1
+           if (amountMuffinTwo == 0) {
+             buttonMuffinTwo.innerHTML = "sold out!";
+           }
+         };
+         </script>   </div>
+     </div>
+   </div>
+     <div class="col s1 m4 l4">
+       <div class="card medium" style="width:250px">
+         <div class="card-image">
+           <img src="<%= @z.muffins[2].image %>">
+         </div>
+         <div class="card-content"><%= @z.muffins[0].description %>
+         </div>
+         <div class="card-action">
+           <button id="clickmeMuffinThree" type="button" class="btn btn-primary #f8bbd0 pink lighten-4 center"><%= @z.muffins[0].name %>          <%= @z.muffins[0].price %></button>
+           <script>
+           let buttonMuffinThree = document.getElementById("clickmeMuffinThree")
+           let amountMuffinThree = <%= @z.muffins[0].amount %>
+           buttonMuffinThree.onclick = function() {
+             amountMuffinThree -= 1
+             if (amountMuffinThree == 0) {
+               buttonMuffinThree.innerHTML = "sold out!";
+             }
+           };
+           </script>       </div>
+     </div>
+
+   </div>
+
+</div>

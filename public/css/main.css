@@ -1,0 +1,55 @@
+body {
+background-image: url("/images/background_image.jpg");
+background-size: 80%;
+width: 100%;
+
+
+}
+
+.logo {
+
+  height: 10%;
+  width: 10%;
+  display: flex;
+}
+
+
+
+
+.wrapper{
+
+  margin-top: 40px;
+    background: rgba(255, 255, 255, 0.48);
+    padding: 8px 28px;
+}
+
+.wrapper .email{
+
+  margin-top: 40px;
+    background-color: #FFB9C9;
+    opacity: 0.7;
+    padding: 8px 28px;
+    border: 3px solid black;
+}
+
+.flow-text  {
+
+  color: black;
+}
+
+.form-control {
+
+  color: black;
+}
+
+.navcolor {
+
+  font-size: 300px;
+}
+
+footer {
+  margin:160px 0 0 0;
+   padding-bottom:50px;
+    background-color:#FFB3CF;
+     height:20px;
+}
